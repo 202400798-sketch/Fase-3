@@ -1,0 +1,78 @@
+table medicamentos_recetados
+	lineageTag: 71d58b00-2899-4a28-986c-b97f3e3b5ce2
+
+	column id_receta
+		dataType: int64
+		formatString: 0
+		lineageTag: 14b9f247-51e2-4b01-857c-c4f561a80ab7
+		summarizeBy: sum
+		sourceColumn: id_receta
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_paciente
+		dataType: int64
+		formatString: 0
+		lineageTag: 697b0111-e42e-45b9-b259-c6f782ca9e53
+		summarizeBy: none
+		sourceColumn: id_paciente
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_medico
+		dataType: int64
+		formatString: 0
+		lineageTag: 219ad503-824b-4ccb-b8f3-dad484ad4897
+		summarizeBy: sum
+		sourceColumn: id_medico
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_receta
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cd4f080d-5f0c-4a38-9880-605fd9238b93
+		summarizeBy: none
+		sourceColumn: fecha_receta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column id_medicamento
+		dataType: int64
+		formatString: 0
+		lineageTag: 2718af5f-d4f7-48d7-aef4-2b8a7bce900e
+		summarizeBy: none
+		sourceColumn: id_medicamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column medicamento
+		dataType: string
+		lineageTag: 711b0794-f996-4cf8-92d5-54f5c4e7f998
+		summarizeBy: none
+		sourceColumn: medicamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column cantidad
+		dataType: int64
+		formatString: 0
+		lineageTag: 41be1e89-7c4d-40b0-88c2-c0f5c9cf8f24
+		summarizeBy: sum
+		sourceColumn: cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition medicamentos_recetados = m
+		mode: import
+		source =
+				let
+				    Origen = DatabricksMultiCloud.Catalogs("dbc-d90294fe-0325.cloud.databricks.com", "/sql/1.0/warehouses/a7860994bd3a1b39", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation=null]),
+				    workspace_Database = Origen{[Name="workspace",Kind="Database"]}[Data],
+				    gold_Schema = workspace_Database{[Name="gold",Kind="Schema"]}[Data],
+				    medicamentos_recetados_Table = gold_Schema{[Name="medicamentos_recetados",Kind="Table"]}[Data]
+				in
+				    medicamentos_recetados_Table
+

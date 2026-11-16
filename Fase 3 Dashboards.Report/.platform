@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Fase 3 Dashboards"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e7e82f51-f3d3-b4ef-44db-4fa6a31dacc9"
+  }
+}

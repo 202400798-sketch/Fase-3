@@ -1,0 +1,112 @@
+table dim_medicamento
+	lineageTag: d0edb4af-92a1-4ee3-bdc3-051c6801bbd5
+
+	column id_medicamento
+		dataType: int64
+		formatString: 0
+		lineageTag: 85e30dd4-26c9-473c-9917-665993a914b6
+		summarizeBy: none
+		sourceColumn: id_medicamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		lineageTag: 763062ed-4437-407b-ab8f-5fa43fab0b25
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: 910f0e66-03c1-4296-9907-d2b9cd037316
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column fabricante
+		dataType: string
+		lineageTag: 91b5e055-5e3e-415b-a65e-40868fb25dc4
+		summarizeBy: none
+		sourceColumn: fabricante
+
+		annotation SummarizationSetBy = Automatic
+
+	column stock
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a98a82f-f722-4d0f-86f8-dd63aa12bbb7
+		summarizeBy: sum
+		sourceColumn: stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_generico
+		dataType: string
+		lineageTag: a0779e82-306e-4e6c-bb79-7c29ca516558
+		summarizeBy: none
+		sourceColumn: nombre_generico
+
+		annotation SummarizationSetBy = Automatic
+
+	column ingrediente_activo
+		dataType: string
+		lineageTag: 6a0e5bae-f9ed-47f8-90ab-5ab71f8140a3
+		summarizeBy: none
+		sourceColumn: ingrediente_activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column proposito
+		dataType: string
+		lineageTag: 5c584ec5-75c4-4757-8953-45dc0cd1b3d3
+		summarizeBy: none
+		sourceColumn: proposito
+
+		annotation SummarizationSetBy = Automatic
+
+	column indicaciones_uso
+		dataType: string
+		lineageTag: f46ea1b4-5396-418a-884d-bca77b3552c3
+		summarizeBy: none
+		sourceColumn: indicaciones_uso
+
+		annotation SummarizationSetBy = Automatic
+
+	column advertencias
+		dataType: string
+		lineageTag: 420ecf8e-921e-44b9-9b3f-4009797dacb4
+		summarizeBy: none
+		sourceColumn: advertencias
+
+		annotation SummarizationSetBy = Automatic
+
+	column via_administracion
+		dataType: string
+		lineageTag: cb55e04e-c4d8-48b8-abb3-0d1be2fffed8
+		summarizeBy: none
+		sourceColumn: via_administracion
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_ndc
+		dataType: string
+		lineageTag: 0a2d91eb-1777-4bd5-9d40-c45fc612c252
+		summarizeBy: none
+		sourceColumn: codigo_ndc
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_medicamento = m
+		mode: import
+		source =
+				let
+				    Origen = DatabricksMultiCloud.Catalogs("dbc-d90294fe-0325.cloud.databricks.com", "/sql/1.0/warehouses/a7860994bd3a1b39", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation=null]),
+				    workspace_Database = Origen{[Name="workspace",Kind="Database"]}[Data],
+				    gold_Schema = workspace_Database{[Name="gold",Kind="Schema"]}[Data],
+				    dim_medicamento_Table = gold_Schema{[Name="dim_medicamento",Kind="Table"]}[Data]
+				in
+				    dim_medicamento_Table
+

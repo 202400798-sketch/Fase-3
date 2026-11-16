@@ -1,0 +1,41 @@
+table dim_paciente
+	lineageTag: 0ce0b48d-2be3-4526-9de4-f787566ea5e5
+
+	column id_paciente
+		dataType: int64
+		formatString: 0
+		lineageTag: f098ff5b-17cc-4c4c-bb00-fc3b1bd90a49
+		summarizeBy: none
+		sourceColumn: id_paciente
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		lineageTag: 43443b4b-a28e-4160-ae81-04c181f2de1a
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column apellido
+		dataType: string
+		lineageTag: 7ce738fd-11f3-41fa-80f5-319e6704dcc2
+		summarizeBy: none
+		sourceColumn: apellido
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_paciente = m
+		mode: import
+		source =
+				let
+				  Origen = DatabricksMultiCloud.Catalogs("dbc-d90294fe-0325.cloud.databricks.com", "/sql/1.0/warehouses/a7860994bd3a1b39", [Catalog = null, Database = null, QueryTags = null, EnableAutomaticProxyDiscovery = "enabled", Implementation = "2.0", Protocol = null]),
+				  #"Navegación 1" = Origen{[Name = "workspace", Kind = "Database"]}[Data],
+				  #"Navegación 2" = #"Navegación 1"{[Name = "gold", Kind = "Schema"]}[Data],
+				  #"Navegación 3" = #"Navegación 2"{[Name = "dim_paciente", Kind = "Table"]}[Data]
+				in
+				  #"Navegación 3"
+
+	annotation PBI_ResultType = Table
+

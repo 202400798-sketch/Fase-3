@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Fase 3 Dashboards"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "02e406d7-6ed8-8c49-4afb-3f11ea067ba3"
+  }
+}

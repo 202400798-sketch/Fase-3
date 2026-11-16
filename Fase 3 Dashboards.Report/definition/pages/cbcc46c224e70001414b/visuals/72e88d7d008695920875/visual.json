@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "72e88d7d008695920875",
+  "position": {
+    "x": 1155.1724137931035,
+    "y": 106.89655172413794,
+    "z": 4000,
+    "height": 114,
+    "width": 222,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Medicamentos Stock Bajo"
+                }
+              },
+              "queryRef": "Medidas DAX.Medicamentos Stock Bajo",
+              "nativeQueryRef": "Medicamentos Stock Bajo"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas DAX"
+                  }
+                },
+                "Property": "Medicamentos Stock Bajo"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

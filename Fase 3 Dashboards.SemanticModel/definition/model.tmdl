@@ -1,0 +1,31 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-SV
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["calidad_aire","dim_medicamento","fact_prescripciones","medicamentos_multifuente","medicamentos_recetados","reingresos_30_dias","resumen_diagnosticos_icd11","resumen_ensayos_medicamentos","dim_paciente"]
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
+ref table calidad_aire
+ref table DateTableTemplate_2e158db5-7b5a-4fc9-aa3e-9f6df782e914
+ref table dim_medicamento
+ref table fact_prescripciones
+ref table LocalDateTable_f60dc7e1-7615-454e-a064-62ef38a0aafc
+ref table medicamentos_multifuente
+ref table medicamentos_recetados
+ref table reingresos_30_dias
+ref table LocalDateTable_c5b83017-cf95-4701-ac96-6599643a9fb0
+ref table resumen_diagnosticos_icd11
+ref table resumen_ensayos_medicamentos
+ref table dim_paciente
+ref table 'Medidas DAX'
+ref table Dim_Fecha
+
+ref cultureInfo es-ES
+
