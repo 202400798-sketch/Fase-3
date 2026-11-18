@@ -1,0 +1,163 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "63b70020c5bd705d4316",
+  "position": {
+    "x": 571.18835893290213,
+    "y": 540.14551333872271,
+    "z": 3,
+    "height": 505.99838318512531,
+    "width": 487.37267582861762,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_prescripciones"
+                    }
+                  },
+                  "Property": "fabricante"
+                }
+              },
+              "queryRef": "fact_prescripciones.fabricante",
+              "nativeQueryRef": "fabricante",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": []
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_prescripciones"
+                        }
+                      },
+                      "Property": "cantidad"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fact_prescripciones.cantidad)",
+              "nativeQueryRef": "Suma de cantidad"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_medicamento"
+                        }
+                      },
+                      "Property": "stock"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(dim_medicamento.stock)",
+              "nativeQueryRef": "Suma de stock"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_prescripciones"
+                      }
+                    },
+                    "Property": "cantidad"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "743cddcfeec6878291ec",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_prescripciones"
+                  }
+                },
+                "Property": "cantidad"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "06985e416a426dd37949",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_prescripciones"
+              }
+            },
+            "Property": "fabricante"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9f8befc8c34470d02e50",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_medicamento"
+                  }
+                },
+                "Property": "stock"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
