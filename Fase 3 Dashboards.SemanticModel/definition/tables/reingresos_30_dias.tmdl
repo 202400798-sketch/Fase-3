@@ -3,10 +3,13 @@ table reingresos_30_dias
 
 	column id_paciente
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: d84b407e-26c0-4580-a877-0d2454f60828
 		summarizeBy: none
 		sourceColumn: id_paciente
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -17,6 +20,8 @@ table reingresos_30_dias
 		summarizeBy: sum
 		sourceColumn: hospitalizacion_anterior
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column hospitalizacion_reingreso
@@ -25,6 +30,8 @@ table reingresos_30_dias
 		lineageTag: 618ad121-9cce-4a7d-8774-4eeff7d898b7
 		summarizeBy: sum
 		sourceColumn: hospitalizacion_reingreso
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -40,6 +47,8 @@ table reingresos_30_dias
 			relationship: a2204b56-1952-4e90-88d6-25a77f8cd3ea
 			defaultHierarchy: LocalDateTable_c5b83017-cf95-4701-ac96-6599643a9fb0.'Jerarquía de fechas'
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -50,6 +59,8 @@ table reingresos_30_dias
 		lineageTag: 36e7f278-b640-4278-b990-ba5e38f47403
 		summarizeBy: none
 		sourceColumn: fecha_reingreso
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -62,6 +73,8 @@ table reingresos_30_dias
 		summarizeBy: sum
 		sourceColumn: dias_entre_ingresos
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column motivo_anterior
@@ -70,6 +83,8 @@ table reingresos_30_dias
 		summarizeBy: none
 		sourceColumn: motivo_anterior
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column motivo_reingreso
@@ -77,6 +92,8 @@ table reingresos_30_dias
 		lineageTag: 8bd4b8c1-ed8f-4eee-b9bc-d1f6c96e7ea7
 		summarizeBy: none
 		sourceColumn: motivo_reingreso
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -90,4 +107,6 @@ table reingresos_30_dias
 				    reingresos_30_dias_Table = gold_Schema{[Name="reingresos_30_dias",Kind="Table"]}[Data]
 				in
 				    reingresos_30_dias_Table
+
+	changedProperty = IsHidden
 

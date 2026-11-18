@@ -8,6 +8,13 @@ table calidad_aire
 		summarizeBy: none
 		sourceColumn: fecha_hora
 
+		variation Variation
+			isDefault
+			relationship: 596266ec-8430-4e85-a7e5-0bf1f5350da9
+			defaultHierarchy: LocalDateTable_5d9e9663-c92e-4ccf-8b98-aa1a24d70c73.'Jerarquía de fechas'
+
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column municipio
@@ -16,6 +23,8 @@ table calidad_aire
 		summarizeBy: none
 		sourceColumn: municipio
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column latitud
@@ -23,6 +32,8 @@ table calidad_aire
 		lineageTag: 571b1c39-ff9c-4278-b146-3c53ea2868b9
 		summarizeBy: sum
 		sourceColumn: latitud
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -34,6 +45,8 @@ table calidad_aire
 		summarizeBy: sum
 		sourceColumn: longitud
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -43,6 +56,8 @@ table calidad_aire
 		lineageTag: b97231a5-ef73-48fc-9820-98e9b19f5f8f
 		summarizeBy: sum
 		sourceColumn: pm10
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -54,6 +69,8 @@ table calidad_aire
 		summarizeBy: sum
 		sourceColumn: pm2_5
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -64,6 +81,8 @@ table calidad_aire
 		summarizeBy: sum
 		sourceColumn: us_aqi
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -73,6 +92,23 @@ table calidad_aire
 		lineageTag: e6b4c53d-86b2-4fa0-bd4c-a9ec28cde832
 		summarizeBy: none
 		sourceColumn: categoria_aqi
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha =
+			
+			DATE(
+			    YEAR(calidad_aire[fecha_hora]),
+			    MONTH(calidad_aire[fecha_hora]),
+			    DAY(calidad_aire[fecha_hora])
+			)
+		formatString: General Date
+		lineageTag: 9c9440b5-a5fb-4471-a4b6-82d319cc1ff1
+		summarizeBy: none
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -86,4 +122,6 @@ table calidad_aire
 				    calidad_aire_Table = gold_Schema{[Name="calidad_aire",Kind="Table"]}[Data]
 				in
 				    calidad_aire_Table
+
+	changedProperty = IsHidden
 

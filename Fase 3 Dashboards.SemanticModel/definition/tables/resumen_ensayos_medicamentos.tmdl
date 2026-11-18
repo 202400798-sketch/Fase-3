@@ -7,6 +7,8 @@ table resumen_ensayos_medicamentos
 		summarizeBy: none
 		sourceColumn: medicamento_cmi
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column total_ensayos
@@ -15,6 +17,8 @@ table resumen_ensayos_medicamentos
 		lineageTag: 8b2d5d02-bf80-472e-a3ff-a01591d3731f
 		summarizeBy: sum
 		sourceColumn: total_ensayos
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -25,6 +29,8 @@ table resumen_ensayos_medicamentos
 		summarizeBy: sum
 		sourceColumn: ensayos_reclutando
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column ensayos_completados
@@ -33,6 +39,8 @@ table resumen_ensayos_medicamentos
 		lineageTag: 8dcf0893-6d7b-4493-b8c7-8d0108812309
 		summarizeBy: sum
 		sourceColumn: ensayos_completados
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -46,4 +54,6 @@ table resumen_ensayos_medicamentos
 				    resumen_ensayos_medicamentos_Table = gold_Schema{[Name="resumen_ensayos_medicamentos",Kind="Table"]}[Data]
 				in
 				    resumen_ensayos_medicamentos_Table
+
+	changedProperty = IsHidden
 

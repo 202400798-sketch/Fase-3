@@ -26,6 +26,7 @@ ref table resumen_ensayos_medicamentos
 ref table dim_paciente
 ref table 'Medidas DAX'
 ref table Dim_Fecha
+ref table LocalDateTable_5d9e9663-c92e-4ccf-8b98-aa1a24d70c73
 
 ref cultureInfo es-ES
 

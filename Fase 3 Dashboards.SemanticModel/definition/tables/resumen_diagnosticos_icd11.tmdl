@@ -7,6 +7,8 @@ table resumen_diagnosticos_icd11
 		summarizeBy: none
 		sourceColumn: diagnostico_cmi
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column descripcion_cmi
@@ -14,6 +16,8 @@ table resumen_diagnosticos_icd11
 		lineageTag: e1000445-354f-4734-b8ce-c29166779b6b
 		summarizeBy: none
 		sourceColumn: descripcion_cmi
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -23,6 +27,8 @@ table resumen_diagnosticos_icd11
 		summarizeBy: none
 		sourceColumn: nombre_who
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column codigo_icd11
@@ -31,13 +37,18 @@ table resumen_diagnosticos_icd11
 		summarizeBy: none
 		sourceColumn: codigo_icd11
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column id_who
 		dataType: string
+		isHidden
 		lineageTag: 841348de-0bb3-49f9-9490-120dc7517b49
 		summarizeBy: none
 		sourceColumn: id_who
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -46,6 +57,8 @@ table resumen_diagnosticos_icd11
 		lineageTag: 756eb14c-8d50-44e1-a5d6-a2189887221d
 		summarizeBy: sum
 		sourceColumn: score
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -56,6 +69,8 @@ table resumen_diagnosticos_icd11
 		lineageTag: bfb4ad8d-dcc0-428d-9c78-a45c64dfca84
 		summarizeBy: none
 		sourceColumn: estado_mapeo
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -69,4 +84,6 @@ table resumen_diagnosticos_icd11
 				    resumen_diagnosticos_icd11_Table = gold_Schema{[Name="resumen_diagnosticos_icd11",Kind="Table"]}[Data]
 				in
 				    resumen_diagnosticos_icd11_Table
+
+	changedProperty = IsHidden
 
