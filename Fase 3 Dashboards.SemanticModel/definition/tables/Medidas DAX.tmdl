@@ -35,26 +35,7 @@ table 'Medidas DAX'
 		formatString: 0
 		lineageTag: 20dbf4c8-e6ef-473f-b070-2e0cc6c6b694
 
-	measure 'Total Prescripciones' =
-			
-			COUNTROWS(fact_prescripciones)
-		formatString: 0
-		lineageTag: ae6a5d14-02ef-47af-a9af-6cd8a2feced0
 
-	measure 'Total Medicamentos Recetados' =
-			
-			COUNTROWS(medicamentos_recetados)
-		formatString: 0
-		lineageTag: 366fd7fe-cf07-431b-9d2d-613ff1032510
-
-	measure 'Promedio Medicamentos por Prescripción' =
-			
-			DIVIDE(
-			    [Total Medicamentos Recetados],
-			    [Total Prescripciones],
-			    0
-			)
-		lineageTag: 262ae322-cd8b-4b58-9fb6-a5185f836fde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

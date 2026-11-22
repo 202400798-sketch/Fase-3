@@ -40,8 +40,7 @@ relationship 5055eff8-29f3-6bf5-9f36-6b117b1b4467
 	fromColumn: reingresos_30_dias.fecha_reingreso
 	toColumn: Dim_Fecha.Date
 
-relationship 596266ec-8430-4e85-a7e5-0bf1f5350da9
-	joinOnDateBehavior: datePartOnly
+
 	fromColumn: calidad_aire.fecha_hora
 	toColumn: LocalDateTable_5d9e9663-c92e-4ccf-8b98-aa1a24d70c73.Date
 
