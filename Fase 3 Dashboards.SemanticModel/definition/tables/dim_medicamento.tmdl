@@ -3,10 +3,13 @@ table dim_medicamento
 
 	column id_medicamento
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 85e30dd4-26c9-473c-9917-665993a914b6
 		summarizeBy: none
 		sourceColumn: id_medicamento
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

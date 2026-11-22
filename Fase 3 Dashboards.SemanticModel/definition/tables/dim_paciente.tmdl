@@ -3,10 +3,13 @@ table dim_paciente
 
 	column id_paciente
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: f098ff5b-17cc-4c4c-bb00-fc3b1bd90a49
 		summarizeBy: none
 		sourceColumn: id_paciente
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

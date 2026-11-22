@@ -35,6 +35,37 @@ table 'Medidas DAX'
 		formatString: 0
 		lineageTag: 20dbf4c8-e6ef-473f-b070-2e0cc6c6b694
 
+	measure 'Total Reingresos' =
+			
+			DISTINCTCOUNT(
+			    reingresos_30_dias[hospitalizacion_reingreso]
+			)
+		formatString: 0
+		lineageTag: 58a99e3d-2119-40b5-96ef-4a0849b58e75
+
+	measure 'Promedio de Días entre Reingresos' =
+			
+			AVERAGE(
+			    reingresos_30_dias[dias_entre_ingresos]
+			)
+		lineageTag: a7f21186-6f00-4018-ab09-4c9d3868c0e7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Pacientes con Reingreso' =
+			
+			DIVIDE(
+			    DISTINCTCOUNT(reingresos_30_dias[id_paciente]),
+			    CALCULATE(
+			        DISTINCTCOUNT(reingresos_30_dias[id_paciente]),
+			        REMOVEFILTERS(reingresos_30_dias)
+			    ),
+			    0
+			)
+		lineageTag: e1a47d5d-31de-4121-abb5-60c95499d8ca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Column
 		formatString: 0
 		lineageTag: 98eb1f7d-24ff-4348-b4ca-851b4c5bc55a
