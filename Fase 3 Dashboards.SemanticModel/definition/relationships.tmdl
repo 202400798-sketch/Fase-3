@@ -40,16 +40,15 @@ relationship 5055eff8-29f3-6bf5-9f36-6b117b1b4467
 	fromColumn: reingresos_30_dias.fecha_reingreso
 	toColumn: Dim_Fecha.Date
 
-relationship AutoDetected_28af1205-b4f9-4884-b394-c5cd2f8f0afa
-	isActive: false
-	fromColumn: fact_prescripciones.nombre
-	toColumn: medicamentos_multifuente.nombre
 
-relationship 89fe4c04-1bbd-ca30-7b3d-51bb9fd1bc39
-	fromColumn: dim_medicamento.id_medicamento
-	toColumn: medicamentos_multifuente.id_medicamento
-
-relationship ada621fe-7c58-345d-dd94-263ec37d78d3
 	fromColumn: calidad_aire.fecha_hora
+	toColumn: LocalDateTable_5d9e9663-c92e-4ccf-8b98-aa1a24d70c73.Date
+
+relationship 00f8030a-8b9d-7295-8143-28d965e12d58
+	fromColumn: calidad_aire.Fecha
 	toColumn: Dim_Fecha.Date
+
+relationship 84696ce8-2240-d2d4-f078-cf4c993c9118
+	fromColumn: medicamentos_multifuente.id_medicamento
+	toColumn: dim_medicamento.id_medicamento
 

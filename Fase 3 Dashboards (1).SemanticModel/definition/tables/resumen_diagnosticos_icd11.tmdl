@@ -1,0 +1,89 @@
+table resumen_diagnosticos_icd11
+	lineageTag: fbbc1c5e-2367-4a3e-a941-b6519abfcada
+
+	column diagnostico_cmi
+		dataType: string
+		lineageTag: 5f438dcc-e11e-4814-ac14-d25bc2b9dc08
+		summarizeBy: none
+		sourceColumn: diagnostico_cmi
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column descripcion_cmi
+		dataType: string
+		lineageTag: e1000445-354f-4734-b8ce-c29166779b6b
+		summarizeBy: none
+		sourceColumn: descripcion_cmi
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_who
+		dataType: string
+		lineageTag: e4c03825-69fb-4314-88f5-1a1dcec0384c
+		summarizeBy: none
+		sourceColumn: nombre_who
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_icd11
+		dataType: string
+		lineageTag: 006aa1ee-2ca4-47f7-bf39-fa48ffae4a46
+		summarizeBy: none
+		sourceColumn: codigo_icd11
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_who
+		dataType: string
+		isHidden
+		lineageTag: 841348de-0bb3-49f9-9490-120dc7517b49
+		summarizeBy: none
+		sourceColumn: id_who
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column score
+		dataType: double
+		lineageTag: 756eb14c-8d50-44e1-a5d6-a2189887221d
+		summarizeBy: sum
+		sourceColumn: score
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column estado_mapeo
+		dataType: string
+		lineageTag: bfb4ad8d-dcc0-428d-9c78-a45c64dfca84
+		summarizeBy: none
+		sourceColumn: estado_mapeo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition resumen_diagnosticos_icd11 = m
+		mode: import
+		source =
+				let
+				    Origen = DatabricksMultiCloud.Catalogs("dbc-d90294fe-0325.cloud.databricks.com", "/sql/1.0/warehouses/a7860994bd3a1b39", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation=null]),
+				    workspace_Database = Origen{[Name="workspace",Kind="Database"]}[Data],
+				    gold_Schema = workspace_Database{[Name="gold",Kind="Schema"]}[Data],
+				    resumen_diagnosticos_icd11_Table = gold_Schema{[Name="resumen_diagnosticos_icd11",Kind="Table"]}[Data]
+				in
+				    resumen_diagnosticos_icd11_Table
+
+	changedProperty = IsHidden
+

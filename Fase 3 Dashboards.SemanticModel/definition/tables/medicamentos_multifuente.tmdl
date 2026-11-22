@@ -19,6 +19,8 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: nombre
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column tipo
@@ -26,6 +28,8 @@ table medicamentos_multifuente
 		lineageTag: 458c0990-1645-42c5-8466-0bf1790e0880
 		summarizeBy: none
 		sourceColumn: tipo
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -35,14 +39,18 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: fabricante
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column stock
 		dataType: int64
 		formatString: 0
 		lineageTag: c5eae090-27e8-44ed-96ab-52507f66199d
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: stock
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -52,6 +60,8 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: nombre_generico
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column nombre_comercial
@@ -59,6 +69,8 @@ table medicamentos_multifuente
 		lineageTag: d2c87f91-ff48-44c9-8139-e89aedb0c644
 		summarizeBy: none
 		sourceColumn: nombre_comercial
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -68,6 +80,8 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: ingrediente_activo
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column proposito
@@ -75,6 +89,8 @@ table medicamentos_multifuente
 		lineageTag: ef41dd3c-454f-4c6f-92b9-c6af6cafd35d
 		summarizeBy: none
 		sourceColumn: proposito
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -84,6 +100,8 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: indicaciones_uso
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column advertencias
@@ -91,6 +109,8 @@ table medicamentos_multifuente
 		lineageTag: 1e2658eb-c1cf-4417-9c9e-100feeaa3890
 		summarizeBy: none
 		sourceColumn: advertencias
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -100,6 +120,8 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: no_usar
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column consultar_medico
@@ -107,6 +129,8 @@ table medicamentos_multifuente
 		lineageTag: 43f2bc10-1709-49d9-b443-fc49b101e2d6
 		summarizeBy: none
 		sourceColumn: consultar_medico
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -116,6 +140,8 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: dosificacion
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column almacenamiento
@@ -123,6 +149,8 @@ table medicamentos_multifuente
 		lineageTag: 3a2ec0e1-d211-4e46-ac53-7dd5f5646d51
 		summarizeBy: none
 		sourceColumn: almacenamiento
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -132,6 +160,8 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: fabricante_fda
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column tipo_producto
@@ -139,6 +169,8 @@ table medicamentos_multifuente
 		lineageTag: 54b026fe-972b-45ca-9a20-79467970e249
 		summarizeBy: none
 		sourceColumn: tipo_producto
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -148,6 +180,8 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: via_administracion
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column codigo_ndc
@@ -155,6 +189,8 @@ table medicamentos_multifuente
 		lineageTag: 51904bca-cf8e-456c-9db5-00614d143e78
 		summarizeBy: none
 		sourceColumn: codigo_ndc
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -164,6 +200,8 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: fecha_vigencia
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column rxcui
@@ -171,6 +209,8 @@ table medicamentos_multifuente
 		lineageTag: d7cb7330-d8d8-4912-bef7-907e0e549216
 		summarizeBy: none
 		sourceColumn: rxcui
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -180,13 +220,17 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: nombre_normalizado
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column cid
 		dataType: double
 		lineageTag: 4723f417-220c-4dad-87bd-33dec3b17c67
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: cid
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -198,13 +242,17 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: formula_molecular
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column peso_molecular
 		dataType: double
 		lineageTag: 0ad271f8-6afd-4242-8cfe-0ed9120353bf
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: peso_molecular
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -215,6 +263,8 @@ table medicamentos_multifuente
 		lineageTag: a00703f1-4efe-4e4f-9892-2895af909941
 		summarizeBy: none
 		sourceColumn: inchikey
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -234,6 +284,8 @@ table medicamentos_multifuente
 		summarizeBy: none
 		sourceColumn: estado_pubchem
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	partition medicamentos_multifuente = m
@@ -246,4 +298,6 @@ table medicamentos_multifuente
 				    medicamentos_multifuente_Table = gold_Schema{[Name="medicamentos_multifuente",Kind="Table"]}[Data]
 				in
 				    medicamentos_multifuente_Table
+
+	changedProperty = IsHidden
 

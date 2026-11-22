@@ -1,0 +1,163 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 241.66836363452927,
+        "y": 340.96774077148933
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 7.6923076923077076,
+            "y": 234.86289116751007
+          },
+          "nodeIndex": "calidad_aire",
+          "nodeLineageTag": "c64e643d-10ef-4809-b35e-0ea48d77e469",
+          "size": {
+            "height": 172,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 625.36814205349128,
+            "y": 302.10961486866404
+          },
+          "nodeIndex": "dim_medicamento",
+          "nodeLineageTag": "d0edb4af-92a1-4ee3-bdc3-051c6801bbd5",
+          "size": {
+            "height": 228.79540813929725,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 330.47499362813784,
+            "y": 110.25641025641023
+          },
+          "nodeIndex": "fact_prescripciones",
+          "nodeLineageTag": "edf1e999-c876-4903-9fc4-0bdc98efe857",
+          "size": {
+            "height": 230.90994790196243,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 313.77725344568523,
+            "y": 522.27829640682876
+          },
+          "nodeIndex": "medicamentos_multifuente",
+          "nodeLineageTag": "c9f47a15-cb91-4096-b5ed-58405f867c05",
+          "size": {
+            "height": 236.28316428682638,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1251.4956754513623,
+            "y": 205.1282051282052
+          },
+          "nodeIndex": "medicamentos_recetados",
+          "nodeLineageTag": "71d58b00-2899-4a28-986c-b97f3e3b5ce2",
+          "size": {
+            "height": 155.69230769230774,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1234.0386982835889,
+            "y": 7.69230769230769
+          },
+          "nodeIndex": "reingresos_30_dias",
+          "nodeLineageTag": "8eb17901-f3e6-4787-ab42-eba6188216e0",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 12.84580791041185,
+            "y": 0
+          },
+          "nodeIndex": "resumen_diagnosticos_icd11",
+          "nodeLineageTag": "fbbc1c5e-2367-4a3e-a941-b6519abfcada",
+          "size": {
+            "height": 148.00000000000003,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 890.80419862261078,
+            "y": 525.64102564102552
+          },
+          "nodeIndex": "resumen_ensayos_medicamentos",
+          "nodeLineageTag": "89749b06-8146-46e9-ad65-a4b2b84d9ed8",
+          "size": {
+            "height": 172.97331459096392,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 896.88104460878492,
+            "y": 123.79355085964815
+          },
+          "nodeIndex": "dim_paciente",
+          "nodeLineageTag": "0ce0b48d-2be3-4526-9de4-f787566ea5e5",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1268.1640335098894,
+            "y": 468.72545030339768
+          },
+          "nodeIndex": "Medidas DAX",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1544.4717258175817,
+            "y": 291.84615384615381
+          },
+          "nodeIndex": "Dim_Fecha",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 10
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 83.585619963679221,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}
