@@ -3,13 +3,10 @@ table dim_paciente
 
 	column id_paciente
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: f098ff5b-17cc-4c4c-bb00-fc3b1bd90a49
 		summarizeBy: none
 		sourceColumn: id_paciente
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -19,8 +16,6 @@ table dim_paciente
 		summarizeBy: none
 		sourceColumn: nombre
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column apellido
@@ -28,8 +23,6 @@ table dim_paciente
 		lineageTag: 7ce738fd-11f3-41fa-80f5-319e6704dcc2
 		summarizeBy: none
 		sourceColumn: apellido
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -43,8 +36,6 @@ table dim_paciente
 				  #"Navegación 3" = #"Navegación 2"{[Name = "dim_paciente", Kind = "Table"]}[Data]
 				in
 				  #"Navegación 3"
-
-	changedProperty = IsHidden
 
 	annotation PBI_ResultType = Table
 
