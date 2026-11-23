@@ -36,9 +36,6 @@ table 'Medidas DAX'
 		lineageTag: 20dbf4c8-e6ef-473f-b070-2e0cc6c6b694
 
 
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Column
 		formatString: 0
 		lineageTag: 98eb1f7d-24ff-4348-b4ca-851b4c5bc55a
