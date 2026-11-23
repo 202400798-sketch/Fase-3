@@ -1,0 +1,201 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "453eb275871c0146064c",
+  "position": {
+    "x": 1668,
+    "y": 1400,
+    "z": 7000,
+    "height": 716,
+    "width": 1476,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reingresos_30_dias"
+                    }
+                  },
+                  "Property": "id_paciente"
+                }
+              },
+              "queryRef": "reingresos_30_dias.id_paciente",
+              "nativeQueryRef": "id_paciente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reingresos_30_dias"
+                    }
+                  },
+                  "Property": "fecha_alta_anterior"
+                }
+              },
+              "queryRef": "reingresos_30_dias.fecha_alta_anterior",
+              "nativeQueryRef": "fecha_alta_anterior"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reingresos_30_dias"
+                    }
+                  },
+                  "Property": "fecha_reingreso"
+                }
+              },
+              "queryRef": "reingresos_30_dias.fecha_reingreso",
+              "nativeQueryRef": "fecha_reingreso"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "reingresos_30_dias"
+                        }
+                      },
+                      "Property": "dias_entre_ingresos"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(reingresos_30_dias.dias_entre_ingresos)",
+              "nativeQueryRef": "Suma de dias_entre_ingresos"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reingresos_30_dias"
+                    }
+                  },
+                  "Property": "motivo_reingreso"
+                }
+              },
+              "queryRef": "reingresos_30_dias.motivo_reingreso",
+              "nativeQueryRef": "motivo_reingreso"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "reingresos_30_dias"
+                  }
+                },
+                "Property": "motivo_reingreso"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "164D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "reingresos_30_dias.id_paciente"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Detalle de reingresos hospitalarios'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "40D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
