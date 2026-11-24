@@ -103,6 +103,43 @@ table 'Medidas DAX'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Total_Prescripciones =
+			
+			COUNTROWS(fact_prescripciones)
+		formatString: 0
+		lineageTag: 4a4d4d3a-2bc1-4d7e-9410-dda2897fd40a
+
+	measure 'Total_Medicamentos Recetados' =
+			
+			COUNTROWS(medicamentos_recetados)
+		formatString: 0
+		lineageTag: b6577abe-b2ed-4128-bbaa-83d585cc1c63
+
+	measure 'Promedio_Medicamentos por Prescripción' =
+			
+			DIVIDE(
+			    [Total Medicamentos Recetados],
+			    [Total Prescripciones],
+			    0
+			)
+		lineageTag: 32a240a3-429a-4c4f-9ea0-c9ef2b360f19
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '%_Participación por Medicamento Recetado' =
+			
+			DIVIDE(
+			    [Total Medicamentos Recetados],
+			    CALCULATE(
+			        [Total Medicamentos Recetados],
+			        REMOVEFILTERS(dim_medicamento)
+			    ),
+			    0
+			)
+		lineageTag: 99b127df-0cf5-4919-ae1f-38fa96850363
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Column
 		formatString: 0
 		lineageTag: 98eb1f7d-24ff-4348-b4ca-851b4c5bc55a
