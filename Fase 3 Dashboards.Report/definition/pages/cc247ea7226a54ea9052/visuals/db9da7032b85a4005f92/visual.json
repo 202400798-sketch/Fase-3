@@ -1,5 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+<<<<<<<< HEAD:Fase 3 Dashboards.Report/definition/pages/cc247ea7226a54ea9052/visuals/db9da7032b85a4005f92/visual.json
   "name": "db9da7032b85a4005f92",
   "position": {
     "x": 0,
@@ -8,6 +9,16 @@
     "height": 43.333333333333336,
     "width": 1920,
     "tabOrder": 8001
+========
+  "name": "01f061db1e935971ae88",
+  "position": {
+    "x": 0,
+    "y": 100,
+    "z": 13000,
+    "height": 40,
+    "width": 1920,
+    "tabOrder": 10003
+>>>>>>>> origin/main:Fase 3 Dashboards.Report/definition/pages/746957c35240c0c317c4/visuals/01f061db1e935971ae88/visual.json
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +30,11 @@
               {
                 "textRuns": [
                   {
+<<<<<<<< HEAD:Fase 3 Dashboards.Report/definition/pages/cc247ea7226a54ea9052/visuals/db9da7032b85a4005f92/visual.json
                     "value": "Monitoreo de la actividad de prescripción médica – Centro Médico Integral.",
+========
+                    "value": "Monitoreo de indicadores clínicos y condiciones ambientales – Centro Médico Integral.",
+>>>>>>>> origin/main:Fase 3 Dashboards.Report/definition/pages/746957c35240c0c317c4/visuals/01f061db1e935971ae88/visual.json
                     "textStyle": {
                       "fontStyle": "italic",
                       "fontSize": "16pt"

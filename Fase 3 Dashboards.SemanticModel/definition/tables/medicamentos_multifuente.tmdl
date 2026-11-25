@@ -3,13 +3,10 @@ table medicamentos_multifuente
 
 	column id_medicamento
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: b6d47a7c-b53e-423b-a4c6-e2638629ac44
 		summarizeBy: none
 		sourceColumn: id_medicamento
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

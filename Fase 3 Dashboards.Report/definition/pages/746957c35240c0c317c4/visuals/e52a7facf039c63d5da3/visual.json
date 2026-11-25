@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "e52a7facf039c63d5da3",
+  "position": {
+    "x": 855,
+    "y": 190,
+    "z": 4000,
+    "height": 97.5,
+    "width": 207.5,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Promedio PM2.5"
+                }
+              },
+              "queryRef": "Medidas DAX.Promedio PM2.5",
+              "nativeQueryRef": "Promedio PM2.5"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

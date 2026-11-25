@@ -1,0 +1,169 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "6979c5604570b028e915",
+  "position": {
+    "x": 1058.5610347615197,
+    "y": 540.14551333872271,
+    "z": 4000,
+    "height": 505.99838318512531,
+    "width": 453.22554567502021,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "hundredPercentStackedColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "reingresos_30_dias"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "fecha_alta_anterior"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Año"
+                }
+              },
+              "queryRef": "reingresos_30_dias.fecha_alta_anterior.Variación.Jerarquía de fechas.Año",
+              "nativeQueryRef": "fecha_alta_anterior Año",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "reingresos_30_dias"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "fecha_alta_anterior"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Trimestre"
+                }
+              },
+              "queryRef": "reingresos_30_dias.fecha_alta_anterior.Variación.Jerarquía de fechas.Trimestre",
+              "nativeQueryRef": "fecha_alta_anterior Trimestre",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "reingresos_30_dias"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "fecha_alta_anterior"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Mes"
+                }
+              },
+              "queryRef": "reingresos_30_dias.fecha_alta_anterior.Variación.Jerarquía de fechas.Mes",
+              "nativeQueryRef": "fecha_alta_anterior Mes",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "reingresos_30_dias"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "fecha_alta_anterior"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Día"
+                }
+              },
+              "queryRef": "reingresos_30_dias.fecha_alta_anterior.Variación.Jerarquía de fechas.Día",
+              "nativeQueryRef": "fecha_alta_anterior Día",
+              "active": false
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reingresos_30_dias"
+                    }
+                  },
+                  "Property": "motivo_reingreso"
+                }
+              },
+              "queryRef": "reingresos_30_dias.motivo_reingreso",
+              "nativeQueryRef": "motivo_reingreso"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "reingresos_30_dias"
+                        }
+                      },
+                      "Property": "dias_entre_ingresos"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(reingresos_30_dias.dias_entre_ingresos)",
+              "nativeQueryRef": "Suma de dias_entre_ingresos"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

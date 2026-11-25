@@ -27,5 +27,6 @@ ref table dim_paciente
 ref table 'Medidas DAX'
 ref table Dim_Fecha
 
+
 ref cultureInfo es-ES
 
