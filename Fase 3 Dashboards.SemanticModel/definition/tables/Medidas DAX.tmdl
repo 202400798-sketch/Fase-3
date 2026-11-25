@@ -35,31 +35,6 @@ table 'Medidas DAX'
 		formatString: 0
 		lineageTag: 20dbf4c8-e6ef-473f-b070-2e0cc6c6b694
 
-	measure 'Total Diagnósticos' =
-			
-			COUNTROWS(resumen_diagnosticos_icd11)
-		formatString: 0
-		lineageTag: 816147ec-49bc-44b1-9bbd-cdc761f85dfc
-
-	measure 'Diagnósticos Únicos' =
-			
-			DISTINCTCOUNT(resumen_diagnosticos_icd11[codigo_icd11])
-		formatString: 0
-		lineageTag: 30dc18c7-7533-4181-a00e-9abd522769d0
-
-	measure 'Promedio PM2.5' =
-			
-			AVERAGE(calidad_aire[pm2_5])
-		lineageTag: 6d97cdcb-4d93-4a41-8e88-adfbe7e7457c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Promedio AQI' =
-			
-			AVERAGE(calidad_aire[us_aqi])
-		lineageTag: 8bc3b8be-0bc3-43c5-a8fa-ea07de9096b8
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Column
 		formatString: 0

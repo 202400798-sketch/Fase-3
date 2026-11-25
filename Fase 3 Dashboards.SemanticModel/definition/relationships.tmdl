@@ -53,8 +53,4 @@ relationship ada621fe-7c58-345d-dd94-263ec37d78d3
 	fromColumn: calidad_aire.fecha_hora
 	toColumn: Dim_Fecha.Date
 
-relationship 611ddc36-8aba-491c-b87f-6fab166bf624
-	joinOnDateBehavior: datePartOnly
-	fromColumn: calidad_aire.Fecha_
-	toColumn: LocalDateTable_1fb45304-ccf1-403c-8073-7f493724cd0c.Date
 
