@@ -41,13 +41,10 @@ table medicamentos_recetados
 
 	column id_medicamento
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: 2718af5f-d4f7-48d7-aef4-2b8a7bce900e
 		summarizeBy: none
 		sourceColumn: id_medicamento
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

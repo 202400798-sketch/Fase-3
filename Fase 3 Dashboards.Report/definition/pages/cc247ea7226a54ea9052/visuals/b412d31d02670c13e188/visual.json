@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "b412d31d02670c13e188",
   "position": {
     "x": 0,
     "y": 540.14551333872271,
-    "z": 2,
+    "z": 2000,
     "height": 505.99838318512531,
     "width": 571.18835893290213,
-    "tabOrder": 2
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -94,70 +94,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6ffb2be0ae9d632b0323",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_medicamento"
-              }
-            },
-            "Property": "nombre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ab79360f9d60a2a00301",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_medicamento"
-              }
-            },
-            "Property": "fabricante"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "74dae6406db8a8ad9c04",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_medicamento"
-              }
-            },
-            "Property": "nombre_generico"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ce2f8df7e77990b209c1",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dim_medicamento"
-                  }
-                },
-                "Property": "stock"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "6979c5604570b028e915",
   "position": {
     "x": 1058.5610347615197,
     "y": 540.14551333872271,
-    "z": 4,
+    "z": 4000,
     "height": 505.99838318512531,
     "width": 453.22554567502021,
-    "tabOrder": 4
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "hundredPercentStackedColumnChart",
@@ -165,142 +165,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "25011d1791a9c0b62d0b",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "reingresos_30_dias"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "fecha_alta_anterior"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Año"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1d1b8415e574abe58a05",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "reingresos_30_dias"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "fecha_alta_anterior"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Trimestre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "296d858f4ab6200aa7eb",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "reingresos_30_dias"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "fecha_alta_anterior"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Mes"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2f36254bd07eb78e4838",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "reingresos_30_dias"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "fecha_alta_anterior"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Día"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8ba98d1fc0ba7c7bcd89",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "reingresos_30_dias"
-                  }
-                },
-                "Property": "dias_entre_ingresos"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7042fd6d1848201c7e84",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "reingresos_30_dias"
-              }
-            },
-            "Property": "motivo_reingreso"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

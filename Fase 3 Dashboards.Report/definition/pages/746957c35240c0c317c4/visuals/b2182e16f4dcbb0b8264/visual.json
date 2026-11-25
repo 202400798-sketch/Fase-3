@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "b2182e16f4dcbb0b8264",
+  "position": {
+    "x": 1512.5,
+    "y": 200,
+    "z": 10000,
+    "height": 75,
+    "width": 352.5,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "resumen_diagnosticos_icd11"
+                    }
+                  },
+                  "Property": "codigo_icd11"
+                }
+              },
+              "queryRef": "resumen_diagnosticos_icd11.codigo_icd11",
+              "nativeQueryRef": "codigo_icd11",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
