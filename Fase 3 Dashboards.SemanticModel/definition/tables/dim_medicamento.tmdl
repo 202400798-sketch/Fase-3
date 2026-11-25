@@ -19,8 +19,6 @@ table dim_medicamento
 		summarizeBy: none
 		sourceColumn: nombre
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column tipo
@@ -29,8 +27,6 @@ table dim_medicamento
 		summarizeBy: none
 		sourceColumn: tipo
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column fabricante
@@ -38,8 +34,6 @@ table dim_medicamento
 		lineageTag: 91b5e055-5e3e-415b-a65e-40868fb25dc4
 		summarizeBy: none
 		sourceColumn: fabricante
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -50,8 +44,6 @@ table dim_medicamento
 		summarizeBy: sum
 		sourceColumn: stock
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column nombre_generico
@@ -59,8 +51,6 @@ table dim_medicamento
 		lineageTag: a0779e82-306e-4e6c-bb79-7c29ca516558
 		summarizeBy: none
 		sourceColumn: nombre_generico
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -70,8 +60,6 @@ table dim_medicamento
 		summarizeBy: none
 		sourceColumn: ingrediente_activo
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column proposito
@@ -79,8 +67,6 @@ table dim_medicamento
 		lineageTag: 5c584ec5-75c4-4757-8953-45dc0cd1b3d3
 		summarizeBy: none
 		sourceColumn: proposito
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -90,8 +76,6 @@ table dim_medicamento
 		summarizeBy: none
 		sourceColumn: indicaciones_uso
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column advertencias
@@ -99,8 +83,6 @@ table dim_medicamento
 		lineageTag: 420ecf8e-921e-44b9-9b3f-4009797dacb4
 		summarizeBy: none
 		sourceColumn: advertencias
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -110,8 +92,6 @@ table dim_medicamento
 		summarizeBy: none
 		sourceColumn: via_administracion
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column codigo_ndc
@@ -119,8 +99,6 @@ table dim_medicamento
 		lineageTag: 0a2d91eb-1777-4bd5-9d40-c45fc612c252
 		summarizeBy: none
 		sourceColumn: codigo_ndc
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -134,6 +112,4 @@ table dim_medicamento
 				    dim_medicamento_Table = gold_Schema{[Name="dim_medicamento",Kind="Table"]}[Data]
 				in
 				    dim_medicamento_Table
-
-	changedProperty = IsHidden
 

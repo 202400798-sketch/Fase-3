@@ -3,37 +3,28 @@ table fact_prescripciones
 
 	column id_receta
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: c96ccf7c-4bfc-4b4a-bdd5-dc7592631023
 		summarizeBy: sum
 		sourceColumn: id_receta
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column id_paciente
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: 764df7f0-ab01-4dcb-8104-36b044dad42a
 		summarizeBy: none
 		sourceColumn: id_paciente
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column id_medico
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: 21f3bbdb-8546-481f-a0e4-6623fb507f73
 		summarizeBy: sum
 		sourceColumn: id_medico
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -49,33 +40,25 @@ table fact_prescripciones
 			relationship: 49dd7c44-5834-48c4-ae8a-45b72c12a428
 			defaultHierarchy: LocalDateTable_f60dc7e1-7615-454e-a064-62ef38a0aafc.'Jerarquía de fechas'
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
 
 	column id_detalle
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: 333947aa-3f55-4f11-a176-fc143997bf58
 		summarizeBy: sum
 		sourceColumn: id_detalle
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column id_medicamento
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: 69a6230e-b0fc-4bdc-b147-08bb713a292b
 		summarizeBy: none
 		sourceColumn: id_medicamento
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -85,8 +68,6 @@ table fact_prescripciones
 		summarizeBy: none
 		sourceColumn: dosis
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column frecuencia
@@ -94,8 +75,6 @@ table fact_prescripciones
 		lineageTag: c705bd01-808f-482a-9c42-94f2be20883b
 		summarizeBy: none
 		sourceColumn: frecuencia
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -106,8 +85,6 @@ table fact_prescripciones
 		summarizeBy: sum
 		sourceColumn: duracion_dias
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column cantidad
@@ -117,8 +94,6 @@ table fact_prescripciones
 		summarizeBy: sum
 		sourceColumn: cantidad
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column nombre
@@ -126,8 +101,6 @@ table fact_prescripciones
 		lineageTag: 780a01a2-c889-469d-9817-876c9fc138a2
 		summarizeBy: none
 		sourceColumn: nombre
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -137,8 +110,6 @@ table fact_prescripciones
 		summarizeBy: none
 		sourceColumn: tipo
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column fabricante
@@ -146,8 +117,6 @@ table fact_prescripciones
 		lineageTag: c2c91157-b413-430f-8cf8-40d0b16a71a1
 		summarizeBy: none
 		sourceColumn: fabricante
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -158,8 +127,6 @@ table fact_prescripciones
 		summarizeBy: sum
 		sourceColumn: stock
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column nombre_generico
@@ -167,8 +134,6 @@ table fact_prescripciones
 		lineageTag: 4668553d-c092-430f-b737-39ee03c53fde
 		summarizeBy: none
 		sourceColumn: nombre_generico
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -178,8 +143,6 @@ table fact_prescripciones
 		summarizeBy: none
 		sourceColumn: ingrediente_activo
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column proposito
@@ -187,8 +150,6 @@ table fact_prescripciones
 		lineageTag: fd427900-f933-4dc2-aa0e-fe8f4aea53f7
 		summarizeBy: none
 		sourceColumn: proposito
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -198,8 +159,6 @@ table fact_prescripciones
 		summarizeBy: none
 		sourceColumn: indicaciones_uso
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column advertencias
@@ -207,8 +166,6 @@ table fact_prescripciones
 		lineageTag: e88e8d92-159a-4845-b3df-196f077bb42e
 		summarizeBy: none
 		sourceColumn: advertencias
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -218,8 +175,6 @@ table fact_prescripciones
 		summarizeBy: none
 		sourceColumn: via_administracion
 
-		changedProperty = IsHidden
-
 		annotation SummarizationSetBy = Automatic
 
 	column codigo_ndc
@@ -227,8 +182,6 @@ table fact_prescripciones
 		lineageTag: 284161dd-c45a-432d-92cf-341426963b5d
 		summarizeBy: none
 		sourceColumn: codigo_ndc
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -242,6 +195,4 @@ table fact_prescripciones
 				    fact_prescripciones_Table = gold_Schema{[Name="fact_prescripciones",Kind="Table"]}[Data]
 				in
 				    fact_prescripciones_Table
-
-	changedProperty = IsHidden
 
