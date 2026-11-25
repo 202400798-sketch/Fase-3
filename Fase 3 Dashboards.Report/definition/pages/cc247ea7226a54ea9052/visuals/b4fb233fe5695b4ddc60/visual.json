@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "b4fb233fe5695b4ddc60",
   "position": {
     "x": 0,
-    "y": 0,
+    "y": 20,
     "z": 0,
-    "height": 91.57639450282943,
-    "width": 1907.5828617623281,
+    "height": 53.333333333333336,
+    "width": 1920,
     "tabOrder": 0
   },
   "visual": {
@@ -19,10 +19,17 @@
               {
                 "textRuns": [
                   {
-                    "value": "Análisis de reingresos a 30 días: Comportamiento y seguimiento de pacientes  ",
+                    "value": "Análisis de Prescripciones y Medicamentos Recetados",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "28pt"
+                    }
+                  },
+                  {
+                    "value": "  ",
                     "textStyle": {
                       "fontFamily": "Calibri",
-                      "fontSize": "42pt"
+                      "fontSize": "28pt"
                     }
                   }
                 ],

@@ -109,6 +109,11 @@ table 'Medidas DAX'
 		formatString: 0
 		lineageTag: 4a4d4d3a-2bc1-4d7e-9410-dda2897fd40a
 
+	measure 'Medicamentos Distintos' =
+			
+			DISTINCTCOUNT(dim_medicamento[id_medicamento])
+		formatString: 0
+		lineageTag: 4d19c993-af2a-4ced-9ae6-51f4bff3427d
 
 	column Column
 		formatString: 0
@@ -124,4 +129,6 @@ table 'Medidas DAX'
 		source = Row("Column", BLANK())
 
 	annotation PBI_Id = 682138c3f65144d383deb188d8aceaca
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
 

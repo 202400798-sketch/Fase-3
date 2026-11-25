@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "1b24e8831d64cbd560d6",
   "position": {
     "x": 41.379310344827587,
@@ -111,7 +111,7 @@
                 "Function": 0
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
