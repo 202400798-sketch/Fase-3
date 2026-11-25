@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "f359c1efb2038c69da01",
   "position": {
     "x": 0,
     "y": 122.61924009700888,
-    "z": 1,
+    "z": 1000,
     "height": 378.72271624898946,
     "width": 1907.5828617623281,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -100,61 +100,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "345b9bbb70c8cbd98ee6",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "resumen_ensayos_medicamentos"
-                  }
-                },
-                "Property": "ensayos_completados"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2b6b675e49233d37180c",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "resumen_ensayos_medicamentos"
-                  }
-                },
-                "Property": "total_ensayos"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fc7a3900538d70033c29",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "resumen_ensayos_medicamentos"
-              }
-            },
-            "Property": "medicamento_cmi"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

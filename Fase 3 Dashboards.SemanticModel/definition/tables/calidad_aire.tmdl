@@ -76,6 +76,20 @@ table calidad_aire
 
 		annotation SummarizationSetBy = Automatic
 
+	column Fecha_ =
+			
+			DATEVALUE(Calidad_Aire[fecha_hora])
+		formatString: General Date
+		lineageTag: 60cab2e2-ee22-4b0c-8b33-dbb54ea7e07c
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 611ddc36-8aba-491c-b87f-6fab166bf624
+			defaultHierarchy: LocalDateTable_1fb45304-ccf1-403c-8073-7f493724cd0c.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition calidad_aire = m
 		mode: import
 		source =

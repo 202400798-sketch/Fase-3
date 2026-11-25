@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "eb5ab3b005c58eccb5d2",
   "position": {
     "x": 1512,
     "y": 540,
-    "z": 5,
+    "z": 5000,
     "height": 506,
     "width": 396,
-    "tabOrder": 5
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "hundredPercentStackedBarChart",
@@ -165,142 +165,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e38a05bbaa14900c0493",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "medicamentos_recetados"
-                  }
-                },
-                "Property": "cantidad"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2f8c62ab1366d89acd79",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "medicamentos_recetados"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "fecha_receta"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Año"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9b2d1d6207a342060376",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "medicamentos_recetados"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "fecha_receta"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Trimestre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4ce3177d35423c2c37c5",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "medicamentos_recetados"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "fecha_receta"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Mes"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "33760d064a786e030bdc",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "medicamentos_recetados"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "fecha_receta"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Día"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d932b160803e2b08eed9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "medicamentos_recetados"
-              }
-            },
-            "Property": "id_paciente"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
