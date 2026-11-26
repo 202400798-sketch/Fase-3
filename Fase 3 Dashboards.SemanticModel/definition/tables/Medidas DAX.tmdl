@@ -35,6 +35,29 @@ table 'Medidas DAX'
 		formatString: 0
 		lineageTag: 20dbf4c8-e6ef-473f-b070-2e0cc6c6b694
 
+	measure 'Total Prescripciones' =
+			
+			COUNTROWS(fact_prescripciones)
+		formatString: 0
+		lineageTag: 59f7671a-c221-4eee-ac66-50172e981f92
+
+	measure 'Total Medicamentos Recetados' =
+			
+			COUNTROWS(medicamentos_recetados)
+		formatString: 0
+		lineageTag: 4e71e04b-5bad-40f4-a362-dfc401127a06
+
+	measure 'Promedio Medicamentos por Prescripción' =
+			
+			DIVIDE(
+			    [Total Medicamentos Recetados],
+			    [Total Prescripciones],
+			    0
+			)
+		lineageTag: 7844013f-dba2-4654-b4e9-58e0c918d10d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	measure 'Total Reingresos' =
 			
 			DISTINCTCOUNT(
@@ -63,29 +86,6 @@ table 'Medidas DAX'
 			    0
 			)
 		lineageTag: e1a47d5d-31de-4121-abb5-60c95499d8ca
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Total Prescripciones' =
-			
-			COUNTROWS(fact_prescripciones)
-		formatString: 0
-		lineageTag: 59f7671a-c221-4eee-ac66-50172e981f92
-
-	measure 'Total Medicamentos Recetados' =
-			
-			COUNTROWS(medicamentos_recetados)
-		formatString: 0
-		lineageTag: 4e71e04b-5bad-40f4-a362-dfc401127a06
-
-	measure 'Promedio Medicamentos por Prescripción' =
-			
-			DIVIDE(
-			    [Total Medicamentos Recetados],
-			    [Total Prescripciones],
-			    0
-			)
-		lineageTag: 7844013f-dba2-4654-b4e9-58e0c918d10d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

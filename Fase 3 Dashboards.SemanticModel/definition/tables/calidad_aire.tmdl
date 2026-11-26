@@ -74,7 +74,6 @@ table calidad_aire
 		summarizeBy: none
 		sourceColumn: categoria_aqi
 
-
 		annotation SummarizationSetBy = Automatic
 
 	partition calidad_aire = m

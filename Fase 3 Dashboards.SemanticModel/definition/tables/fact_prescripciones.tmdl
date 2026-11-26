@@ -35,8 +35,6 @@ table fact_prescripciones
 		summarizeBy: none
 		sourceColumn: fecha_receta
 
-	
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
