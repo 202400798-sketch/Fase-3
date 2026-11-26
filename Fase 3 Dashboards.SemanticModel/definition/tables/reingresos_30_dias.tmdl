@@ -35,6 +35,7 @@ table reingresos_30_dias
 		summarizeBy: none
 		sourceColumn: fecha_alta_anterior
 
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
