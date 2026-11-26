@@ -37,6 +37,7 @@ table fact_prescripciones
 
 
 
+
 		annotation UnderlyingDateTimeDataType = Date
 
 	column id_detalle
