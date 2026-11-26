@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "1c1764d912f4211d41ca",
+  "position": {
+    "x": 1101.6666666666667,
+    "y": 156.66666666666669,
+    "z": 7000,
+    "height": 75,
+    "width": 245,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_medicamento"
+                    }
+                  },
+                  "Property": "nombre"
+                }
+              },
+              "queryRef": "dim_medicamento.nombre",
+              "nativeQueryRef": "nombre",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

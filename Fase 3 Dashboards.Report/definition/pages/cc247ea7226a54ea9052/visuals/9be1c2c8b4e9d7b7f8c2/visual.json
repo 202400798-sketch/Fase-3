@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "9be1c2c8b4e9d7b7f8c2",
+  "position": {
+    "x": 73.333333333333343,
+    "y": 143.33333333333334,
+    "z": 1000,
+    "height": 101.66666666666667,
+    "width": 980,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Total Prescripciones"
+                }
+              },
+              "queryRef": "Medidas DAX.Total Prescripciones",
+              "nativeQueryRef": "Total Prescripciones"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Total Medicamentos Recetados"
+                }
+              },
+              "queryRef": "Medidas DAX.Total Medicamentos Recetados",
+              "nativeQueryRef": "Total Medicamentos Recetados"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Promedio Medicamentos por Prescripción"
+                }
+              },
+              "queryRef": "Medidas DAX.Promedio Medicamentos por Prescripción",
+              "nativeQueryRef": "Promedio Medicamentos por Prescripción"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Medicamentos Distintos"
+                }
+              },
+              "queryRef": "Medidas DAX.Medicamentos Distintos",
+              "nativeQueryRef": "Medicamentos Distintos"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
