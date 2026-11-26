@@ -35,10 +35,6 @@ table reingresos_30_dias
 		summarizeBy: none
 		sourceColumn: fecha_alta_anterior
 
-		variation Variación
-			isDefault
-			relationship: a2204b56-1952-4e90-88d6-25a77f8cd3ea
-			
 
 		annotation SummarizationSetBy = Automatic
 
