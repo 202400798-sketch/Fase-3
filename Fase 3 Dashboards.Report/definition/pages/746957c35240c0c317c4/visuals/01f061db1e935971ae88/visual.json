@@ -1,15 +1,5 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
-
-  "name": "db9da7032b85a4005f92",
-  "position": {
-    "x": 0,
-    "y": 86.666666666666671,
-    "z": 8001,
-    "height": 43.333333333333336,
-    "width": 1920,
-    "tabOrder": 8001
-
   "name": "01f061db1e935971ae88",
   "position": {
     "x": 0,
@@ -18,7 +8,6 @@
     "height": 40,
     "width": 1920,
     "tabOrder": 10003
-
   },
   "visual": {
     "visualType": "textbox",
@@ -29,11 +18,8 @@
             "paragraphs": [
               {
                 "textRuns": [
-                  {,
+                  {
                     "value": "Monitoreo de la actividad de prescripción médica – Centro Médico Integral.",
-
-                    "value": "Monitoreo de indicadores clínicos y condiciones ambientales – Centro Médico Integral.",
-
                     "textStyle": {
                       "fontStyle": "italic",
                       "fontSize": "16pt"
