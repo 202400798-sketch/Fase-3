@@ -37,7 +37,6 @@ table fact_prescripciones
 
 
 
-		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
 

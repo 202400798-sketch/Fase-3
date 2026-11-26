@@ -45,4 +45,3 @@ relationship ada621fe-7c58-345d-dd94-263ec37d78d3
 	fromColumn: calidad_aire.fecha_hora
 	toColumn: Dim_Fecha.Date
 
-
