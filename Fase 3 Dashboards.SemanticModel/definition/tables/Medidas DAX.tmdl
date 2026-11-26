@@ -35,7 +35,7 @@ table 'Medidas DAX'
 		formatString: 0
 		lineageTag: 20dbf4c8-e6ef-473f-b070-2e0cc6c6b694
 
-<<<<<<< HEAD
+
 	measure 'Total Reingresos' =
 			
 			DISTINCTCOUNT(
