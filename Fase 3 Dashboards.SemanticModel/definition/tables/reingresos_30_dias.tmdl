@@ -38,7 +38,7 @@ table reingresos_30_dias
 		variation Variación
 			isDefault
 			relationship: a2204b56-1952-4e90-88d6-25a77f8cd3ea
-			defaultHierarchy: LocalDateTable_c5b83017-cf95-4701-ac96-6599643a9fb0.'Jerarquía de fechas'
+			
 
 		annotation SummarizationSetBy = Automatic
 
