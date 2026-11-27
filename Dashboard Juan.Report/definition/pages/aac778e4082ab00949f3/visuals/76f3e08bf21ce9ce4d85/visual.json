@@ -1,0 +1,150 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "76f3e08bf21ce9ce4d85",
+  "position": {
+    "x": 61.079691516709516,
+    "y": 696.86375321336766,
+    "z": 4000,
+    "height": 355.37275064267357,
+    "width": 921.74807197943449,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "calidad_aire"
+                    }
+                  },
+                  "Property": "fecha_hora"
+                }
+              },
+              "queryRef": "calidad_aire.fecha_hora",
+              "nativeQueryRef": "fecha_hora",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Promedio AQI"
+                }
+              },
+              "queryRef": "Medidas DAX.Promedio AQI",
+              "nativeQueryRef": "Promedio AQI"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "calidad_aire"
+                  }
+                },
+                "Property": "fecha_hora"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Evolución horaria del índice de calidad del aire.'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "00efade575a1a1b813b7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calidad_aire"
+              }
+            },
+            "Property": "fecha_hora"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3f1f72f72c86040cd741",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Promedio AQI"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

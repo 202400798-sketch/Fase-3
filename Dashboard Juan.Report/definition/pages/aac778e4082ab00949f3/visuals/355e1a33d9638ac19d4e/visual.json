@@ -1,0 +1,140 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "355e1a33d9638ac19d4e",
+  "position": {
+    "x": 111.05398457583549,
+    "y": 119.38303341902315,
+    "z": 1000,
+    "height": 97.172236503856041,
+    "width": 1737.9948586118253,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Promedio PM2.5"
+                }
+              },
+              "queryRef": "Medidas DAX.Promedio PM2.5",
+              "nativeQueryRef": "Promedio PM2.5"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Promedio AQI"
+                }
+              },
+              "queryRef": "Medidas DAX.Promedio AQI",
+              "nativeQueryRef": "Promedio AQI"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Total Registros Ambientales"
+                }
+              },
+              "queryRef": "Medidas DAX.Total Registros Ambientales",
+              "nativeQueryRef": "Total Registros Ambientales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Promedio PM10"
+                }
+              },
+              "queryRef": "Medidas DAX.Promedio PM10",
+              "nativeQueryRef": "Promedio PM10"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fb3208d75860b4c58b5b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Promedio PM2.5"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "480e7ca803e3a4686902",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Promedio AQI"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3a78a0e83785a7e95336",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Total Registros Ambientales"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c503fcbbe5f2de68588b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Promedio PM10"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -35,7 +35,6 @@ table 'Medidas DAX'
 		formatString: 0
 		lineageTag: 20dbf4c8-e6ef-473f-b070-2e0cc6c6b694
 
-
 	measure 'Total Reingresos' =
 			
 			DISTINCTCOUNT(
@@ -93,6 +92,44 @@ table 'Medidas DAX'
 		formatString: 0
 		lineageTag: 4d19c993-af2a-4ced-9ae6-51f4bff3427d
 
+	measure 'Diagnósticos Únicos' =
+			
+			DISTINCTCOUNT(resumen_diagnosticos_icd11[codigo_icd11])
+		formatString: 0
+		lineageTag: 52a4f7c3-a0b1-43b2-8a0a-22b6e8874d36
+
+	measure 'Total Diagnósticos' =
+			
+			COUNTROWS(resumen_diagnosticos_icd11)
+		formatString: 0
+		lineageTag: 557cf410-2602-4ca3-8388-ecc3fcce5c20
+
+	measure 'Promedio PM2.5' =
+			
+			AVERAGE(calidad_aire[pm2_5])
+		lineageTag: 641fcc20-3e73-4e60-acee-da12a09e4771
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Promedio AQI' =
+			
+			AVERAGE(calidad_aire[us_aqi])
+		lineageTag: f2fed213-d042-4d06-97c6-30c953c9a0ad
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Registros Ambientales' =
+			
+			COUNTROWS(Calidad_Aire)
+		formatString: 0
+		lineageTag: f3a4450a-699b-4de8-a04a-0fc5d7fd5496
+
+	measure 'Promedio PM10' =
+			
+			AVERAGE(Calidad_Aire[pm10])
+		lineageTag: a022742a-c15b-4afa-9a9b-46527ce740e5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Column
 		formatString: 0

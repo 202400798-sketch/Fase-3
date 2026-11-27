@@ -1,0 +1,157 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "1d3ae9419f4d12ed7faf",
+  "position": {
+    "x": 1010.5912596401029,
+    "y": 272.08226221079696,
+    "z": 6000,
+    "height": 377.58354755784063,
+    "width": 691.31105398457589,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "resumen_diagnosticos_icd11"
+                    }
+                  },
+                  "Property": "codigo_icd11"
+                }
+              },
+              "queryRef": "resumen_diagnosticos_icd11.codigo_icd11",
+              "nativeQueryRef": "codigo_icd11"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "resumen_diagnosticos_icd11"
+                    }
+                  },
+                  "Property": "descripcion_cmi"
+                }
+              },
+              "queryRef": "resumen_diagnosticos_icd11.descripcion_cmi",
+              "nativeQueryRef": "descripcion_cmi"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Total Diagnósticos"
+                }
+              },
+              "queryRef": "Medidas DAX.Total Diagnósticos",
+              "nativeQueryRef": "Total Diagnósticos"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "resumen_diagnosticos_icd11"
+                  }
+                },
+                "Property": "descripcion_cmi"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0625b0e4e34d44175f9f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "resumen_diagnosticos_icd11"
+              }
+            },
+            "Property": "codigo_icd11"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "da77dc8739a9cbb3551a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "resumen_diagnosticos_icd11"
+              }
+            },
+            "Property": "descripcion_cmi"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c58f71b5bc7ced1902cb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Total Diagnósticos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
