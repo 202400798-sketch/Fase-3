@@ -1,0 +1,178 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "486944a61bf687bb6ad3",
+  "position": {
+    "x": 61.079691516709516,
+    "y": 272.08226221079696,
+    "z": 3000,
+    "height": 405.34704370179952,
+    "width": 921.74807197943449,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "calidad_aire"
+                    }
+                  },
+                  "Property": "fecha_hora"
+                }
+              },
+              "queryRef": "calidad_aire.fecha_hora",
+              "nativeQueryRef": "fecha_hora",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Promedio PM10"
+                }
+              },
+              "queryRef": "Medidas DAX.Promedio PM10",
+              "nativeQueryRef": "Promedio PM10"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Promedio PM2.5"
+                }
+              },
+              "queryRef": "Medidas DAX.Promedio PM2.5",
+              "nativeQueryRef": "Promedio PM2.5"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "calidad_aire"
+                  }
+                },
+                "Property": "fecha_hora"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Evolución horaria de material particulado.'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "92eeb16c5c2c141f2ffa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calidad_aire"
+              }
+            },
+            "Property": "fecha_hora"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0ea66547384417a3d1b5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Promedio PM10"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9a31af8510d2c7f552a2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Promedio PM2.5"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
