@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "8819f2d1cff9955c406f",
+  "position": {
+    "x": 1718.5604113110542,
+    "y": 422.00514138817482,
+    "z": 7000,
+    "height": 74.961439588688947,
+    "width": 183.23907455012855,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "calidad_aire"
+                    }
+                  },
+                  "Property": "municipio"
+                }
+              },
+              "queryRef": "calidad_aire.municipio",
+              "nativeQueryRef": "municipio",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "071f65b967df974d9b51",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calidad_aire"
+              }
+            },
+            "Property": "municipio"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

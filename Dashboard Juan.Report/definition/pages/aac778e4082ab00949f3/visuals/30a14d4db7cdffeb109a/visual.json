@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "30a14d4db7cdffeb109a",
+  "position": {
+    "x": 1718.5604113110542,
+    "y": 541.388174807198,
+    "z": 8001,
+    "height": 66.632390745501283,
+    "width": 183.23907455012855,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "resumen_diagnosticos_icd11"
+                    }
+                  },
+                  "Property": "diagnostico_cmi"
+                }
+              },
+              "queryRef": "resumen_diagnosticos_icd11.diagnostico_cmi",
+              "nativeQueryRef": "diagnostico_cmi",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2674d7ba83b114882a55",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "resumen_diagnosticos_icd11"
+              }
+            },
+            "Property": "diagnostico_cmi"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

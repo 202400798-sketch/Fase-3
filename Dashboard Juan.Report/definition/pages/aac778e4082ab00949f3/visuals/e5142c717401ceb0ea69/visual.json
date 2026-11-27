@@ -1,0 +1,90 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "e5142c717401ceb0ea69",
+  "position": {
+    "x": 1718.5604113110542,
+    "y": 294.293059125964,
+    "z": 8000,
+    "height": 69.40874035989718,
+    "width": 183.23907455012855,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "medicamentos_recetados"
+                    }
+                  },
+                  "Property": "fecha_receta"
+                }
+              },
+              "queryRef": "medicamentos_recetados.fecha_receta",
+              "nativeQueryRef": "fecha_receta",
+              "active": true
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "medicamentos_recetados"
+                  }
+                },
+                "Property": "fecha_receta"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3606304975d06d780ece",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "medicamentos_recetados"
+              }
+            },
+            "Property": "fecha_receta"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
