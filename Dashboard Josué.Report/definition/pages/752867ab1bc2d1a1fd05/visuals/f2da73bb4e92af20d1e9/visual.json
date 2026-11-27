@@ -1,0 +1,140 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "f2da73bb4e92af20d1e9",
+  "position": {
+    "x": 38.868894601542422,
+    "y": 119.38303341902315,
+    "z": 0,
+    "height": 88.843187660668391,
+    "width": 991.15681233933162,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Total Medicamentos Recetados"
+                }
+              },
+              "queryRef": "Medidas DAX.Total Medicamentos Recetados",
+              "nativeQueryRef": "Total Medicamentos Recetados"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Total_Prescripciones"
+                }
+              },
+              "queryRef": "Medidas DAX.Total_Prescripciones",
+              "nativeQueryRef": "Total_Prescripciones"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Promedio Medicamentos por Prescripción"
+                }
+              },
+              "queryRef": "Medidas DAX.Promedio Medicamentos por Prescripción",
+              "nativeQueryRef": "Promedio Medicamentos por Prescripción"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Medicamentos Distintos"
+                }
+              },
+              "queryRef": "Medidas DAX.Medicamentos Distintos",
+              "nativeQueryRef": "Medicamentos Distintos"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "00c3986725e81dfe517b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Total Medicamentos Recetados"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "faeedac1e73ab86ee35e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Total_Prescripciones"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "376496392878a1a5be08",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Promedio Medicamentos por Prescripción"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "983b722bd9d5567bbc2a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Medicamentos Distintos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
