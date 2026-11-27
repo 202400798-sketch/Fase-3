@@ -35,7 +35,6 @@ table 'Medidas DAX'
 		formatString: 0
 		lineageTag: 20dbf4c8-e6ef-473f-b070-2e0cc6c6b694
 
-
 	measure 'Total Reingresos' =
 			
 			DISTINCTCOUNT(
@@ -93,6 +92,22 @@ table 'Medidas DAX'
 		formatString: 0
 		lineageTag: 4d19c993-af2a-4ced-9ae6-51f4bff3427d
 
+	measure 'Total Medicamentos Recetados' =
+			
+			COUNTROWS(medicamentos_recetados)
+		formatString: 0
+		lineageTag: 4da87fc2-e91f-4e14-b53e-3eac55d089fd
+
+	measure 'Promedio Medicamentos por Prescripción' =
+			
+			DIVIDE(
+			    [Total Medicamentos Recetados],
+			    [Total_Prescripciones],
+			    0
+			)
+		lineageTag: c34c038d-d04d-4628-9898-0bff388b1225
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Column
 		formatString: 0

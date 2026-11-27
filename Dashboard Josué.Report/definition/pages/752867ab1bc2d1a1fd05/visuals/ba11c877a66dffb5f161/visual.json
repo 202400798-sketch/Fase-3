@@ -1,0 +1,90 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "ba11c877a66dffb5f161",
+  "position": {
+    "x": 1335.4241645244217,
+    "y": 122.15938303341903,
+    "z": 7,
+    "height": 80.514138817480728,
+    "width": 263.75321336760925,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_prescripciones"
+                    }
+                  },
+                  "Property": "fecha_receta"
+                }
+              },
+              "queryRef": "fact_prescripciones.fecha_receta",
+              "nativeQueryRef": "fecha_receta",
+              "active": true
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_prescripciones"
+                  }
+                },
+                "Property": "fecha_receta"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3e80543152a947937ef2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_prescripciones"
+              }
+            },
+            "Property": "fecha_receta"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

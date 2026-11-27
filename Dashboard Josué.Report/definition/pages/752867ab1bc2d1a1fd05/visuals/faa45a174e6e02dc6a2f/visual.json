@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "faa45a174e6e02dc6a2f",
+  "position": {
+    "x": 1618.6118251928021,
+    "y": 119.38303341902315,
+    "z": 6,
+    "height": 80.514138817480728,
+    "width": 283.18766066838049,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_prescripciones"
+                    }
+                  },
+                  "Property": "id_medico"
+                }
+              },
+              "queryRef": "fact_prescripciones.id_medico",
+              "nativeQueryRef": "id_medico",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "409b9fc399f845dc8a9a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_prescripciones"
+              }
+            },
+            "Property": "id_medico"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
