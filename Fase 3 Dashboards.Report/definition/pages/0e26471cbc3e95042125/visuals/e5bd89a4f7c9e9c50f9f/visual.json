@@ -1,0 +1,183 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "e5bd89a4f7c9e9c50f9f",
+  "position": {
+    "x": 60,
+    "y": 360,
+    "z": 7000,
+    "height": 140,
+    "width": 3746.666666666667,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Total reingresos"
+                }
+              },
+              "queryRef": "Medidas DAX.Total reingresos",
+              "nativeQueryRef": "Total reingresos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "% Pacientes con reingresos"
+                }
+              },
+              "queryRef": "Medidas DAX.% Pacientes con reingresos",
+              "nativeQueryRef": "% Pacientes con reingresos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Promedio de dia entre reingresos"
+                }
+              },
+              "queryRef": "Medidas DAX.Promedio de dia entre reingresos",
+              "nativeQueryRef": "Promedio de dia entre reingresos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Reingresos Entre 15 y 30 Días"
+                }
+              },
+              "queryRef": "Medidas DAX.Reingresos Entre 15 y 30 Días",
+              "nativeQueryRef": "Reingresos Entre 15 y 30 Días"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Reingresos Menos de 15 Días"
+                }
+              },
+              "queryRef": "Medidas DAX.Reingresos Menos de 15 Días",
+              "nativeQueryRef": "Reingresos Menos de 15 Días"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "layout": [
+        {
+          "properties": {
+            "columnCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "12L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8d3bd8b00b7c08773d0f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Total reingresos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "049c74dbc3d132ad352f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "% Pacientes con reingresos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fe4a7579cbf60e821682",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Promedio de dia entre reingresos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2655960bbcc8bc6f2298",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Reingresos Entre 15 y 30 Días"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "df396b913000003f9927",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Reingresos Menos de 15 Días"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

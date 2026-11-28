@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "52e376363028a35e9131",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "34483d4e4852f194abcb",
   "position": {
-    "x": 3203.030303030303,
-    "y": 1078.7878787878788,
-    "z": 9000,
-    "height": 218.18181818181816,
-    "width": 524.24242424242425,
-    "tabOrder": 9000
+    "x": 3436.666666666667,
+    "y": 983.33333333333337,
+    "z": 7002,
+    "height": 96.666666666666671,
+    "width": 323.33333333333337,
+    "tabOrder": 7002
   },
   "visual": {
     "visualType": "slicer",
@@ -32,9 +32,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -44,7 +41,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Basic'"
+                  "Value": "'Dropdown'"
                 }
               }
             }
@@ -63,13 +60,26 @@
             }
           }
         }
-      ],
-      "general": [
-        {
-          "properties": {}
-        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b701c038f06ad2a1bad9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reingresos_30_dias"
+              }
+            },
+            "Property": "motivo_reingreso"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

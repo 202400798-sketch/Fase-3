@@ -58,6 +58,57 @@ table 'Medidas DAX'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Promedio de dia entre reingresos' = ```
+			AVERAGE(reingresos_30_dias[dias_entre_ingresos]
+			)
+			
+			```
+		lineageTag: 290b4e27-83ee-4349-a160-bb119a324a72
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total reingresos' = ```
+			AVERAGE(reingresos_30_dias[dias_entre_ingresos]
+			)
+			
+			```
+		lineageTag: c7faec71-a680-4d6c-98c1-3f36279c1ebd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Pacientes con reingresos' = ```
+			DIVIDE(   DISTINCTCOUNT(reingresos_30_dias[id_paciente]),
+			CALCULATE(       DISTINCTCOUNT(reingresos_30_dias[id_paciente]),      REMOVEFILTERS(reingresos_30_dias)
+			    ),
+			    0
+			)
+			
+			```
+		lineageTag: 1c0e70f0-1c02-4cc6-b5bb-08902cd9b065
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Reingresos Menos de 15 Días' =
+			
+			CALCULATE(
+			    [Total Reingresos],
+			    reingresos_30_dias[dias_entre_ingresos] < 15
+			)
+		lineageTag: 6bdedecf-a22b-427e-bf6f-6c3ea7903bc9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Reingresos Entre 15 y 30 Días' =
+			
+			CALCULATE(
+			    [Total Reingresos],
+			    reingresos_30_dias[dias_entre_ingresos] >= 15,
+			    reingresos_30_dias[dias_entre_ingresos] <= 30
+			)
+		lineageTag: 9da72c37-f68c-41a4-8d7d-a4cb81f45fcb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Column
 		formatString: 0
 		lineageTag: 98eb1f7d-24ff-4348-b4ca-851b4c5bc55a

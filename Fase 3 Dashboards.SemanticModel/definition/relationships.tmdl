@@ -1,13 +1,3 @@
-relationship 49dd7c44-5834-48c4-ae8a-45b72c12a428
-	joinOnDateBehavior: datePartOnly
-	fromColumn: fact_prescripciones.fecha_receta
-	toColumn: LocalDateTable_f60dc7e1-7615-454e-a064-62ef38a0aafc.Date
-
-relationship a2204b56-1952-4e90-88d6-25a77f8cd3ea
-	joinOnDateBehavior: datePartOnly
-	fromColumn: reingresos_30_dias.fecha_alta_anterior
-	toColumn: LocalDateTable_c5b83017-cf95-4701-ac96-6599643a9fb0.Date
-
 relationship AutoDetected_4f91ad3c-34ce-4bd5-a30c-6fe63ab6aa2a
 	fromColumn: fact_prescripciones.id_medicamento
 	toColumn: dim_medicamento.id_medicamento
@@ -39,6 +29,16 @@ relationship 7165a826-4ed9-4053-9e40-a6b49487182a
 relationship 5055eff8-29f3-6bf5-9f36-6b117b1b4467
 	fromColumn: reingresos_30_dias.fecha_reingreso
 	toColumn: Dim_Fecha.Date
+
+relationship 49dd7c44-5834-48c4-ae8a-45b72c12a428
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_prescripciones.fecha_receta
+	toColumn: LocalDateTable_f60dc7e1-7615-454e-a064-62ef38a0aafc.Date
+
+relationship a2204b56-1952-4e90-88d6-25a77f8cd3ea
+	joinOnDateBehavior: datePartOnly
+	fromColumn: reingresos_30_dias.fecha_alta_anterior
+	toColumn: LocalDateTable_c5b83017-cf95-4701-ac96-6599643a9fb0.Date
 
 relationship 596266ec-8430-4e85-a7e5-0bf1f5350da9
 	joinOnDateBehavior: datePartOnly

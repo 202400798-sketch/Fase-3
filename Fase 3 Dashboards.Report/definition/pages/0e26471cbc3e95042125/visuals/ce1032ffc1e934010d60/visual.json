@@ -1,49 +1,38 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "ce1032ffc1e934010d60",
   "position": {
-    "x": 272,
-    "y": 1448,
-    "z": 6000,
-    "height": 612,
-    "width": 1364,
-    "tabOrder": 6000
+    "x": 56.666666666666671,
+    "y": 1350,
+    "z": 3000,
+    "height": 743.33333333333337,
+    "width": 1580,
+    "tabOrder": 3000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "reingresos_30_dias"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "fecha_reingreso"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
+                    "SourceRef": {
+                      "Entity": "dim_paciente"
                     }
                   },
-                  "Level": "Mes"
+                  "Property": "nombre"
                 }
               },
-              "queryRef": "reingresos_30_dias.fecha_reingreso.Variación.Jerarquía de fechas.Mes",
-              "nativeQueryRef": "fecha_reingreso Mes",
+              "queryRef": "dim_paciente.nombre",
+              "nativeQueryRef": "nombre",
               "active": true
             }
           ]
         },
-        "Y2": {
+        "Y": {
           "projections": [
             {
               "field": {
@@ -63,9 +52,46 @@
               },
               "queryRef": "CountNonNull(reingresos_30_dias.id_paciente)",
               "nativeQueryRef": "Recuento de id_paciente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
+                    }
+                  },
+                  "Property": "Total reingresos"
+                }
+              },
+              "queryRef": "Medidas DAX.Total reingresos",
+              "nativeQueryRef": "Total reingresos"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "reingresos_30_dias"
+                      }
+                    },
+                    "Property": "id_paciente"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -103,7 +129,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Evolución mensual de reingresos hospitalarios'"
+                  "Value": "'Top 5 pacientes con mayor cantidad de reingresos.'"
                 }
               }
             },
@@ -111,6 +137,13 @@
               "expr": {
                 "Literal": {
                   "Value": "40D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -132,5 +165,143 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1197d863e8d84d02758a",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "reingresos_30_dias"
+                  }
+                },
+                "Property": "id_paciente"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8b3b1314cdb640796798",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_paciente"
+              }
+            },
+            "Property": "nombre"
+          }
+        },
+        "type": "TopN",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "subquery",
+              "Expression": {
+                "Subquery": {
+                  "Query": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "d",
+                        "Entity": "dim_paciente",
+                        "Type": 0
+                      },
+                      {
+                        "Name": "m",
+                        "Entity": "Medidas DAX",
+                        "Type": 0
+                      }
+                    ],
+                    "Select": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d"
+                            }
+                          },
+                          "Property": "nombre"
+                        },
+                        "Name": "field"
+                      }
+                    ],
+                    "OrderBy": [
+                      {
+                        "Direction": 2,
+                        "Expression": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "m"
+                              }
+                            },
+                            "Property": "Total reingresos"
+                          }
+                        }
+                      }
+                    ],
+                    "Top": 5
+                  }
+                }
+              },
+              "Type": 2
+            },
+            {
+              "Name": "d",
+              "Entity": "dim_paciente",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "nombre"
+                      }
+                    }
+                  ],
+                  "Table": {
+                    "SourceRef": {
+                      "Source": "subquery"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "2910577af1c167037791",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Total reingresos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

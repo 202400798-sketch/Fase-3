@@ -1,16 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "6fac9665ce1472aa2424",
   "position": {
-    "x": 1716,
-    "y": 824,
-    "z": 5000,
-    "height": 544,
-    "width": 1384,
-    "tabOrder": 5000
+    "x": 1680,
+    "y": 546.66666666666674,
+    "z": 2000,
+    "height": 773.33333333333337,
+    "width": 1680,
+    "tabOrder": 2000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +23,11 @@
                       "Entity": "reingresos_30_dias"
                     }
                   },
-                  "Property": "motivo_reingreso"
+                  "Property": "dias_entre_ingresos"
                 }
               },
-              "queryRef": "reingresos_30_dias.motivo_reingreso",
-              "nativeQueryRef": "motivo_reingreso",
+              "queryRef": "reingresos_30_dias.dias_entre_ingresos",
+              "nativeQueryRef": "dias_entre_ingresos",
               "active": true
             }
           ]
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "reingresos_30_dias"
-                        }
-                      },
-                      "Property": "dias_entre_ingresos"
+                    "SourceRef": {
+                      "Entity": "Medidas DAX"
                     }
                   },
-                  "Function": 1
+                  "Property": "Total reingresos"
                 }
               },
-              "queryRef": "Sum(reingresos_30_dias.dias_entre_ingresos)",
-              "nativeQueryRef": "Promedio de dias_entre_ingresos"
+              "queryRef": "Medidas DAX.Total reingresos",
+              "nativeQueryRef": "Total reingresos"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "reingresos_30_dias"
-                      }
-                    },
-                    "Property": "dias_entre_ingresos"
+                  "SourceRef": {
+                    "Entity": "Medidas DAX"
                   }
                 },
-                "Function": 1
+                "Property": "Total reingresos"
               }
             },
             "direction": "Descending"
@@ -160,7 +150,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Promedio de días entre ingresos por motivo'"
+                  "Value": "'Cantidad de reingresos según días transcurridos.'"
                 }
               }
             },
@@ -168,6 +158,13 @@
               "expr": {
                 "Literal": {
                   "Value": "30D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -180,7 +177,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -203,5 +200,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e7fd0767f83d06ed3444",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas DAX"
+              }
+            },
+            "Property": "Total reingresos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5e4379b1d7c063d45904",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reingresos_30_dias"
+              }
+            },
+            "Property": "dias_entre_ingresos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

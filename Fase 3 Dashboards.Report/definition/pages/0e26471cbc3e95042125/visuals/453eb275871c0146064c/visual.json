@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "453eb275871c0146064c",
   "position": {
-    "x": 1668,
-    "y": 1400,
-    "z": 7000,
-    "height": 716,
-    "width": 1476,
-    "tabOrder": 7000
+    "x": 1680,
+    "y": 1350,
+    "z": 4000,
+    "height": 743.33333333333337,
+    "width": 2126.666666666667,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "tableEx",
@@ -31,17 +31,141 @@
             },
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "reingresos_30_dias"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "reingresos_30_dias"
+                        }
+                      },
+                      "Property": "hospitalizacion_anterior"
                     }
                   },
-                  "Property": "fecha_alta_anterior"
+                  "Function": 0
                 }
               },
-              "queryRef": "reingresos_30_dias.fecha_alta_anterior",
-              "nativeQueryRef": "fecha_alta_anterior"
+              "queryRef": "Sum(reingresos_30_dias.hospitalizacion_anterior)",
+              "nativeQueryRef": "Suma de hospitalizacion_anterior"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "reingresos_30_dias"
+                        }
+                      },
+                      "Property": "hospitalizacion_reingreso"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(reingresos_30_dias.hospitalizacion_reingreso)",
+              "nativeQueryRef": "Suma de hospitalizacion_reingreso"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "reingresos_30_dias"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "fecha_alta_anterior"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Año"
+                }
+              },
+              "queryRef": "reingresos_30_dias.fecha_alta_anterior.Variación.Jerarquía de fechas.Año",
+              "nativeQueryRef": "fecha_alta_anterior Año"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "reingresos_30_dias"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "fecha_alta_anterior"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Trimestre"
+                }
+              },
+              "queryRef": "reingresos_30_dias.fecha_alta_anterior.Variación.Jerarquía de fechas.Trimestre",
+              "nativeQueryRef": "fecha_alta_anterior Trimestre"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "reingresos_30_dias"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "fecha_alta_anterior"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Mes"
+                }
+              },
+              "queryRef": "reingresos_30_dias.fecha_alta_anterior.Variación.Jerarquía de fechas.Mes",
+              "nativeQueryRef": "fecha_alta_anterior Mes"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "reingresos_30_dias"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "fecha_alta_anterior"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Día"
+                }
+              },
+              "queryRef": "reingresos_30_dias.fecha_alta_anterior.Variación.Jerarquía de fechas.Día",
+              "nativeQueryRef": "fecha_alta_anterior Día"
             },
             {
               "field": {
@@ -75,40 +199,9 @@
               },
               "queryRef": "Sum(reingresos_30_dias.dias_entre_ingresos)",
               "nativeQueryRef": "Suma de dias_entre_ingresos"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "reingresos_30_dias"
-                    }
-                  },
-                  "Property": "motivo_reingreso"
-                }
-              },
-              "queryRef": "reingresos_30_dias.motivo_reingreso",
-              "nativeQueryRef": "motivo_reingreso"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "reingresos_30_dias"
-                  }
-                },
-                "Property": "motivo_reingreso"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
       }
     },
     "objects": {
@@ -197,5 +290,194 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e018a0f77e73ab64708d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reingresos_30_dias"
+              }
+            },
+            "Property": "id_paciente"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "19fc83d5b85bf72aa1f0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "reingresos_30_dias"
+                  }
+                },
+                "Property": "hospitalizacion_anterior"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3a271c9b1399e14c8656",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "reingresos_30_dias"
+                  }
+                },
+                "Property": "hospitalizacion_reingreso"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fb589ca8ddc72633adc2",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "reingresos_30_dias"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "fecha_alta_anterior"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bd2f522ad6ee0ea679e1",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "reingresos_30_dias"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "fecha_alta_anterior"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Trimestre"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9e11afca6d8281381350",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "reingresos_30_dias"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "fecha_alta_anterior"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "52b8f7e4f26849c39c4a",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "reingresos_30_dias"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "fecha_alta_anterior"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Día"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7584952df624fb8f09d3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reingresos_30_dias"
+              }
+            },
+            "Property": "fecha_reingreso"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bab454112dee4dbd206b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "reingresos_30_dias"
+                  }
+                },
+                "Property": "dias_entre_ingresos"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

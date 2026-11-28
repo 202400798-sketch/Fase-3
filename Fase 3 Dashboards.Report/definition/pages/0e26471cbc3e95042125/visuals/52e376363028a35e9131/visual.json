@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "52e376363028a35e9131",
   "position": {
-    "x": 3203.030303030303,
-    "y": 1078.7878787878788,
-    "z": 9000,
-    "height": 218.18181818181816,
-    "width": 524.24242424242425,
-    "tabOrder": 9000
+    "x": 3436.666666666667,
+    "y": 1170,
+    "z": 6000,
+    "height": 103.33333333333334,
+    "width": 323.33333333333337,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,17 +23,32 @@
                       "Entity": "reingresos_30_dias"
                     }
                   },
-                  "Property": "motivo_reingreso"
+                  "Property": "fecha_reingreso"
                 }
               },
-              "queryRef": "reingresos_30_dias.motivo_reingreso",
-              "nativeQueryRef": "motivo_reingreso",
+              "queryRef": "reingresos_30_dias.fecha_reingreso",
+              "nativeQueryRef": "fecha_reingreso",
               "active": true
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "reingresos_30_dias"
+                  }
+                },
+                "Property": "fecha_reingreso"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -44,7 +59,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Basic'"
+                  "Value": "'Dropdown'"
                 }
               }
             }
@@ -84,5 +99,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "62eb8e38b0901239f239",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reingresos_30_dias"
+              }
+            },
+            "Property": "fecha_reingreso"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

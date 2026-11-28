@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "4d1e7af103cecbebbac0",
   "position": {
-    "x": 3203.030303030303,
-    "y": 887.87878787878788,
-    "z": 8000,
-    "height": 151.5151515151515,
-    "width": 524.24242424242425,
-    "tabOrder": 8000
+    "x": 3436.666666666667,
+    "y": 570,
+    "z": 5000,
+    "height": 100,
+    "width": 323.33333333333337,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -29,6 +29,21 @@
               "queryRef": "reingresos_30_dias.fecha_reingreso",
               "nativeQueryRef": "fecha_reingreso",
               "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_paciente"
+                    }
+                  },
+                  "Property": "nombre"
+                }
+              },
+              "queryRef": "dim_paciente.nombre",
+              "nativeQueryRef": "nombre",
+              "active": false
             }
           ]
         }
@@ -59,7 +74,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'RelativeDatePicker'"
+                  "Value": "'Dropdown'"
                 }
               }
             }
@@ -94,5 +109,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a61395489edcd8f36d9e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reingresos_30_dias"
+              }
+            },
+            "Property": "fecha_reingreso"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dcc75bcd8e8c1f8dee09",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_paciente"
+              }
+            },
+            "Property": "nombre"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
