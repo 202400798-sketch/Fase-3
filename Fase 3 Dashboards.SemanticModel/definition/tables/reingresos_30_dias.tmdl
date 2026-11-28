@@ -42,11 +42,6 @@ table reingresos_30_dias
 		summarizeBy: none
 		sourceColumn: fecha_alta_anterior
 
-		variation Variación
-			isDefault
-			relationship: a2204b56-1952-4e90-88d6-25a77f8cd3ea
-			defaultHierarchy: LocalDateTable_c5b83017-cf95-4701-ac96-6599643a9fb0.'Jerarquía de fechas'
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
