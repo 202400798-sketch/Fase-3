@@ -8,10 +8,7 @@ table calidad_aire
 		summarizeBy: none
 		sourceColumn: fecha_hora
 
-		variation Variation
-			isDefault
-			relationship: 596266ec-8430-4e85-a7e5-0bf1f5350da9
-			defaultHierarchy: LocalDateTable_5d9e9663-c92e-4ccf-8b98-aa1a24d70c73.'Jerarquía de fechas'
+		
 
 		changedProperty = IsHidden
 
