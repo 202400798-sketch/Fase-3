@@ -47,7 +47,7 @@ table fact_prescripciones
 		variation Variación
 			isDefault
 			relationship: 49dd7c44-5834-48c4-ae8a-45b72c12a428
-			defaultHierarchy: LocalDateTable_f60dc7e1-7615-454e-a064-62ef38a0aafc.'Jerarquía de fechas'
+	
 
 		changedProperty = IsHidden
 
