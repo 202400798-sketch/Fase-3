@@ -44,9 +44,6 @@ table fact_prescripciones
 		summarizeBy: none
 		sourceColumn: fecha_receta
 
-		variation Variación
-			isDefault
-			relationship: 49dd7c44-5834-48c4-ae8a-45b72c12a428
 	
 
 		changedProperty = IsHidden
